@@ -114,12 +114,12 @@ def main():
 input, div, label, .markdown-text-container {
     font-family: 'Times New Roman', Times, serif !important;
     font-weight: bold !important;
-    font-size: 17px !important;
+    font-size: 14px !important;
 }
 .main-heading {
     font-family: 'Times New Roman', serif;
     color: #0D47A1;
-    font-size: 33px;
+    font-size: 28px;
     font-weight: bold;
 }
 footer {
@@ -143,12 +143,12 @@ footer {
     st.sidebar.title("🔧 Tools")
     app_mode = st.sidebar.radio("Choose Action:", ["🔍 Check Password", "🔐 Generate Password", "📜 View History"])
 
-    st.markdown('<h1 style="font-family: Times New Roman; color: #0000FF; font-size: 33px; font-weight: bold;">Password Strength Meter</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 style="font-family: Times New Roman; color: #0000FF; font-size: 28px; font-weight: bold;">Password Strength Meter</h1>', unsafe_allow_html=True)
 
     st.markdown("Check your password strength, generate secure passwords, and view history.")
 
     if app_mode == "🔍 Check Password":
-        st.markdown('<h2 style="font-family: Times New Roman; color: #0000FF; font-size: 31px; font-weight: bold;">🔍 Check Password Strength</h2>', unsafe_allow_html=True)
+        st.markdown('<h2 style="font-family: Times New Roman; color: #0000FF; font-size: 23px; font-weight: bold;">🔍 Check Password Strength</h2>', unsafe_allow_html=True)
 
         password = st.text_input("Enter your password", type="password", placeholder="Type or paste your password here...")
 
@@ -195,7 +195,7 @@ footer {
     
 
     elif app_mode == "🔐 Generate Password":
-        st.markdown('<h2 style="font-family: Times New Roman; font-size: 31px; color: #0000FF;">🔐 Generate a Strong Password</h2>', unsafe_allow_html=True)
+        st.markdown('<h2 style="font-family: Times New Roman; font-size: 23px; color: #0000FF;">🔐 Generate a Strong Password</h2>', unsafe_allow_html=True)
 
         pass_length = st.slider("Password length", 8, 32, 12)
         use_upper = st.checkbox("Include uppercase letters (A-Z)", True)
@@ -213,7 +213,7 @@ footer {
                 st.success("✅ This password is STRONG (5/5). You're good to go!")
 
     elif app_mode == "📜 View History":
-        st.markdown('<h2 style="font-family: Times New Roman; font-size: 31px; color: #0000FF;">📜 Password Check History</h2>', unsafe_allow_html=True)
+        st.markdown('<h2 style="font-family: Times New Roman; font-size: 23px; color: #0000FF;">📜 Password Check History</h2>', unsafe_allow_html=True)
 
         history = load_password_history()
 
